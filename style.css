@@ -1,0 +1,228 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #141323;
+    margin: 0;
+    padding: 20px;
+}
+
+.calendar {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.calendar h1 {
+  color: white;
+    margin-bottom: 20px;
+}
+.year-month-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.year-selector, .month-selector {
+    color: white;
+    margin: 0 10px;
+}
+
+.month-selector select {
+    font-size: 18px;
+    padding: 10px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.month-selector select:focus {
+    outline: none;
+    border-color: #0056b3;
+    box-shadow: 0 0 10px rgba(0, 86, 179, 0.5);
+}
+
+.year-selector {
+  color: white;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.year-selector label {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.year-selector input {
+    font-size: 18px;
+    padding: 10px;
+    width: 120px;
+    text-align: center;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.year-selector input:focus {
+    outline: none;
+    border-color: #0056b3;
+    box-shadow: 0 0 10px rgba(0, 86, 179, 0.5);
+}
+
+.months {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.month {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(33% - 20px);
+    margin: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+.month h2 {
+    text-align: center;
+    background-color: #6972C5;
+    color: white;
+    margin: 0;
+    padding: 10px 0;
+    border-radius: 10px 10px 0 0;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    padding: 10px;
+    justify-content: center;
+}
+
+.day {
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 7px;
+}
+
+.day.header {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.day.highlight {
+    background-color: #ffeb3b;
+    position: relative;
+}
+
+.day.highlight::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    display: none;
+    z-index: 10;
+}
+
+.day.highlight:hover::after {
+    display: block;
+}
+
+.legend {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.legend h2 {
+  color: white;
+    margin-bottom: 10px;
+}
+
+.legend ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.legend li {
+    background-color: #ffeb3b;
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 3px;
+}
+.add-date {
+    margin-top: 20px;
+    border: 1px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #4F58B0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-date h2 {
+  color: white;
+    margin-bottom: 10px;
+}
+
+.add-date form {
+  color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.add-date label {
+  color: white;
+    font-size: 16px;
+    margin: 5px;
+}
+
+.add-date input {
+    font-size: 16px;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+}
+
+.add-date button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-date button:hover {
+    background-color: #0056b3;
+}
+
+
+@media (max-width: 800px) {
+    .month {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 500px) {
+    .month {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
