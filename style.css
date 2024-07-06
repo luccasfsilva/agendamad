@@ -1,14 +1,5 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-}
-
-h1 {
-    color: #333;
-}
-
-body {
-    font-family: Arial, sans-serif;
     background-color: #141323;
     margin: 0;
     padding: 20px;
@@ -21,9 +12,10 @@ body {
 }
 
 .calendar h1 {
-  color: white;
+    color: white;
     margin-bottom: 20px;
 }
+
 .year-month-selector {
     display: flex;
     justify-content: center;
@@ -52,7 +44,6 @@ body {
 }
 
 .year-selector {
-  color: white;
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
@@ -155,7 +146,7 @@ body {
 }
 
 .legend h2 {
-  color: white;
+    color: white;
     margin-bottom: 10px;
 }
 
@@ -170,9 +161,9 @@ body {
     padding: 5px;
     border-radius: 3px;
 }
+
 .add-date {
     margin-top: 20px;
-    border: 1px;
     padding: 10px;
     border-radius: 10px;
     background-color: #4F58B0;
@@ -180,12 +171,16 @@ body {
 }
 
 .add-date h2 {
-  color: white;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.add-date h3 {
+    color: white;
     margin-bottom: 10px;
 }
 
 .add-date form {
-  color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -193,7 +188,7 @@ body {
 }
 
 .add-date label {
-  color: white;
+    color: white;
     font-size: 16px;
     margin: 5px;
 }
@@ -221,7 +216,6 @@ body {
 .add-date button:hover {
     background-color: #0056b3;
 }
-
 
 @media (max-width: 800px) {
     .month {
