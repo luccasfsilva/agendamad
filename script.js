@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function() {
             legendContainer.appendChild(legendItem);
         });
     }
-
+    
     const yearInput = document.getElementById('year');
     const monthInput = document.getElementById('month');
 
