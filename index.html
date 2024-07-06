@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="styles.css">
     <style type="text/css">
    body {
-    
     font-family: Arial, sans-serif;
     background-color: #141323;
     margin: 0;
@@ -21,9 +20,10 @@
 }
 
 .calendar h1 {
-  color: white;
+    color: white;
     margin-bottom: 20px;
 }
+
 .year-month-selector {
     display: flex;
     justify-content: center;
@@ -52,7 +52,6 @@
 }
 
 .year-selector {
-  color: white;
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
@@ -155,7 +154,7 @@
 }
 
 .legend h2 {
-  color: white;
+    color: white;
     margin-bottom: 10px;
 }
 
@@ -170,9 +169,9 @@
     padding: 5px;
     border-radius: 3px;
 }
+
 .add-date {
     margin-top: 20px;
-    border: 1px;
     padding: 10px;
     border-radius: 10px;
     background-color: #4F58B0;
@@ -180,12 +179,16 @@
 }
 
 .add-date h2 {
-  color: white;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.add-date h3 {
+    color: white;
     margin-bottom: 10px;
 }
 
 .add-date form {
-  color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -193,7 +196,7 @@
 }
 
 .add-date label {
-  color: white;
+    color: white;
     font-size: 16px;
     margin: 5px;
 }
@@ -222,7 +225,6 @@
     background-color: #0056b3;
 }
 
-
 @media (max-width: 800px) {
     .month {
         width: calc(50% - 20px);
@@ -236,27 +238,34 @@
     }
 }
 </style>        
-</html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendário Anual</title>
-  <div class="add-date">
-            <h2>Adicionar Data Especial</h2>
-            <form id="add-date-form">
-                <label for="date">Data: </label>
-                <input type="date" id="date" required>
-                <label for="description">Descrição: </label>
-                <input type="text" id="description" required>
-                <label for="color">Cor: </label>
-                <input type="color" id="color" value="#ffeb3b" required>
-                <button type="submit">Adicionar</button>
-            </form>
-        </div>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="add-date">
+        <h2>Adicionar Data Especial</h2>
+        <form id="add-date-form">
+            <label for="date">Data: </label>
+            <input type="date" id="date" required>
+            <label for="description">Descrição: </label>
+            <input type="text" id="description" required>
+            <label for="color">Cor: </label>
+            <input type="color" id="color" value="#ffeb3b" required>
+            <button type="submit">Adicionar</button>
+        </form>
+        
+        <h3>Remover Data Especial</h3>
+        <form id="remove-date-form">
+            <label for="remove-date">Data:</label>
+            <input type="date" id="remove-date" required>
+            <button type="submit">Remover Lembrete</button>
+        </form>
+    </div>
+
     <div class="calendar">
         <h1>Calendário Anual</h1>
         <div class="year-month-selector">
@@ -292,7 +301,6 @@
                 <!-- Itens da legenda serão gerados aqui -->
             </ul>
         </div>
-        
     </div>
     <script src="script.js"></script>
 </body>
