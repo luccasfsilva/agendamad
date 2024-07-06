@@ -86,24 +86,7 @@ document.addEventListener("DOMContentLoaded", function() {
             legendContainer.appendChild(legendItem);
         });
     }
-function clearLembretes(year, month) {
-        fetch('http://localhost:3000/lembretes', {
-            method: 'DELETE',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ year, month })
-        })
-        .then(response => {
-            if (response.ok) {
-                fetchLembretes(); // Atualiza os lembretes após deletar
-            } else {
-                console.error('Erro ao limpar lembretes:', response.statusText);
-            }
-        })
-        .catch(error => console.error('Erro ao limpar lembretes:', error));
-    }
-  
+
     const yearInput = document.getElementById('year');
     const monthInput = document.getElementById('month');
 
@@ -129,6 +112,16 @@ function clearLembretes(year, month) {
         generateCalendar(parseInt(yearInput.value), monthInput.value);
         generateLegend();
         addDateForm.reset(); // Resetar o formulário após o envio
+    });
+
+    const removeDateForm = document.getElementById('remove-date-form');
+    removeDateForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const date = document.getElementById('remove-date').value;
+        delete highlightedDays[date];
+        generateCalendar(parseInt(yearInput.value), monthInput.value);
+        generateLegend();
+        removeDateForm.reset(); // Resetar o formulário após o envio
     });
 
     generateCalendar(parseInt(yearInput.value), monthInput.value); // Gera calendário inicial
