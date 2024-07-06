@@ -118,12 +118,29 @@ document.addEventListener("DOMContentLoaded", function() {
     removeDateForm.addEventListener('submit', (event) => {
         event.preventDefault();
         const date = document.getElementById('remove-date').value;
-        delete highlightedDays[date];
-        generateCalendar(parseInt(yearInput.value), monthInput.value);
-        generateLegend();
+        if (highlightedDays[date]) {
+            delete highlightedDays[date];
+            generateCalendar(parseInt(yearInput.value), monthInput.value);
+            generateLegend();
+        } else {
+            alert('Data não encontrada.');
+        }
         removeDateForm.reset(); // Resetar o formulário após o envio
     });
 
     generateCalendar(parseInt(yearInput.value), monthInput.value); // Gera calendário inicial
     generateLegend(); // Gera legenda inicial
+});
+const removeDateForm = document.getElementById('remove-date-form');
+removeDateForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const date = document.getElementById('remove-date').value;
+    if (highlightedDays[date]) {
+        delete highlightedDays[date];
+        generateCalendar(parseInt(yearInput.value), monthInput.value);
+        generateLegend();
+    } else {
+        alert('Data não encontrada.');
+    }
+    removeDateForm.reset(); // Resetar o formulário após o envio
 });
