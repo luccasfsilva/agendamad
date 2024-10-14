@@ -1,4 +1,5 @@
-.body {
+
+body {
     font-family: Arial, sans-serif;
     background-color: #141323;
     margin: 0;
@@ -217,7 +218,7 @@
     margin-top: 20px;
     padding: 10px;
     border-radius: 10px;
-    background-color: #B04F4F;
+    background-color: #B04F4;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -283,3 +284,4 @@
         margin: 10px 0;
     }
 }
+
