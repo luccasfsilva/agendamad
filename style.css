@@ -1,4 +1,4 @@
-body {
+.body {
     font-family: Arial, sans-serif;
     background-color: #141323;
     margin: 0;
@@ -211,6 +211,60 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+}
+
+.remove-date {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #B04F4F;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.remove-date h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+.remove-date h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.remove-date form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.remove-date label {
+    color: white;
+    font-size: 16px;
+    margin: 5px;
+}
+
+.remove-date input {
+    font-size: 16px;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid #f44336;
+    border-radius: 5px;
+}
+
+.remove-date button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.remove-date button:hover {
+    background-color: #d32f2f;
 }
 
 .add-date button:hover {
